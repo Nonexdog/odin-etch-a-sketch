@@ -41,7 +41,7 @@ function askToClear() {
 }
 
 buttonNewGrid.addEventListener('click', () => {
-  let newGridSize = parseInt(prompt('How big do you want your grid to be? Size: 1 - 100', '16'));
+  let newGridSize = parseInt(prompt('How big do you want your grid to be? Size: 1 - 100 \nWarning!! This deletes your current grid!!' , '16'));
   if (!newGridSize) {
     alert('Value must be an integer!');
   } else if (newGridSize > 100) {
