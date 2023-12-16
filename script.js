@@ -5,7 +5,7 @@ function generateGrid(size) {
   for(let rows = 1; rows <= size; rows++) {
     for(let columns = 1; columns <= size; columns++) {
       const squareEtch = document.createElement('div');
-      squareEtch.style.cssText = 'border: 1px solid black; z-index: 100';
+      squareEtch.style.cssText = 'z-index: 100';
       squareEtch.addEventListener('mouseover', () => {
         addColor(squareEtch, 0);
       })
