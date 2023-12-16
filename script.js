@@ -1,5 +1,9 @@
 const gridEtch = document.querySelector('.sketch-container');
 const colorList = ['colorBlack'];
+const buttonNewGrid = document.querySelector('#newGrid');
+const buttonClearGrid = document.querySelector('#clearGrid');
+const checkboxColorful = document.querySelector('#color-toggle');
+let modeColorful = false;
 
 function generateGrid(size) {
   for(let rows = 1; rows <= size; rows++) {
@@ -18,9 +22,6 @@ function generateGrid(size) {
 function addColor(target, color = 0) {
   target.setAttribute('class', colorList[color]);
 }
-
-const buttonNewGrid = document.querySelector('#newGrid');
-const buttonClearGrid = document.querySelector('#clearGrid');
 
 buttonClearGrid.addEventListener('click', () => {
   if (askToClear()) {
@@ -45,5 +46,14 @@ buttonNewGrid.addEventListener('click', () => {
   }
   
 })
+
+checkboxColorful.addEventListener('change', () => {
+  if (checkboxColorful.checked) {
+    modeColorful = true;
+  } else {
+    modeColorful = false;
+  }
+})
+
 
 generateGrid(16);

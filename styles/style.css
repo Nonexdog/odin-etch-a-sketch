@@ -21,6 +21,11 @@ h1 {
   border: 2px solid black;
 }
 
+.toggle {
+  margin-top: 1rem;
+  text-align: center;
+}
+
 html {
   box-sizing: border-box;
 }
