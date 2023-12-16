@@ -42,9 +42,13 @@ function askToClear() {
 }
 
 buttonNewGrid.addEventListener('click', () => {
-  let newGridSize = Number(prompt('How big do you want your grid to be? Max size: 100', '16'));
-  if (newGridSize > 100) {
-    alert('That is too high!!');
+  let newGridSize = parseInt(prompt('How big do you want your grid to be? Size: 1 - 100', '16'));
+  if (!newGridSize) {
+    alert('Value must be an integer!');
+  } else if (newGridSize > 100) {
+    alert('That is too high!!')
+  } else if (newGridSize < 0) {
+    alert('That is too low!!');
   } else {
     while (gridEtch.firstChild){
       gridEtch.removeChild(gridEtch.firstChild);
