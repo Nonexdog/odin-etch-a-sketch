@@ -23,7 +23,6 @@ function generateGrid(size) {
 function addColor(target, colorful) {
   if (colorful) {
     let randomColor = Math.floor(Math.random() * (colorList.length - 1));
-    console.log(randomColor);
     target.setAttribute('class', colorList[randomColor + 1])
   } else {
     target.setAttribute('class', colorList[0]);
