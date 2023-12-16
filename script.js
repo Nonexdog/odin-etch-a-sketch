@@ -33,4 +33,17 @@ function askToClear() {
   return confirm('Do you want to erase your current board?');
 }
 
+buttonNewGrid.addEventListener('click', () => {
+  let newGridSize = Number(prompt('How big do you want your grid to be? Max size: 100', '16'));
+  if (newGridSize > 100) {
+    alert('That is too high!!');
+  } else {
+    while (gridEtch.firstChild){
+      gridEtch.removeChild(gridEtch.firstChild);
+    }
+    generateGrid(newGridSize);
+  }
+  
+})
+
 generateGrid(16);
