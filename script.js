@@ -1,5 +1,5 @@
 const gridEtch = document.querySelector('.sketch-container');
-const colorList = ['colorBlack','colorCoral', 'colorGreenYellow', 'colorViolet'];
+const colorList = ['color-black', 'color-orange', 'color-greenyellow', 'color-dark-purp', 'color-light-magenta'];
 const buttonNewGrid = document.querySelector('#newGrid');
 const buttonClearGrid = document.querySelector('#clearGrid');
 const checkboxColorful = document.querySelector('#color-toggle');
