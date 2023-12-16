@@ -1,5 +1,6 @@
 h1 {
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .button-container {
@@ -14,10 +15,23 @@ h1 {
   margin: auto;
   width: 80vh;
   height: 80vh;
-  border: 2px solid black;
 }
 
 .toggle {
   margin-top: 1rem;
   text-align: center;
+}
+button {
+  display: flex;
+  align-items: center;
+  padding: .5rem;
+  border-radius: .5rem;
+  font-size: 1.5rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }

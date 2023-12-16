@@ -1,21 +1,55 @@
-.colorBlack {
+.color-black {
   background-color: black;
 }
 
-.colorCoral {
-  background-color: coral;
+.color-orange {
+  background-color: rgb(204, 124, 19);
 }
 
-.colorGreenYellow {
-  background-color: greenyellow;
+.color-greenyellow {
+  background-color: rgb(203, 245, 51);
 }
 
-.colorViolet {
-  background-color: violet;
+.color-dark-purp {
+  background-color: rgb(35, 22, 53);
+}
+
+.color-light-magenta {
+  background-color: rgb(153, 71, 119);
+}
+
+body {
+  background-color: #1a0b1a;
+}
+
+.sketch-container {
+  background-color: rgb(247, 229, 241);
+  border: none;
+}
+
+h1 {
+  color: #e0c5e9;
+}
+
+label {
+  color: #cabe11;
+}
+
+button {
+  background-color: #530922;
+  color: #cabe11;
+  border: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #cabe11;
+  color: #530922;
 }
 
 h1 {
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .button-container {
@@ -30,12 +64,26 @@ h1 {
   margin: auto;
   width: 80vh;
   height: 80vh;
-  border: 2px solid black;
 }
 
 .toggle {
   margin-top: 1rem;
   text-align: center;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 html {
@@ -44,6 +92,7 @@ html {
 
 *, *::before, *::after {
   box-sizing: inherit;
+  font-family: "Courier New", Courier, monospace;
 }
 
 img {

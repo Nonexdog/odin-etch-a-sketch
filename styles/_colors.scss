@@ -1,12 +1,46 @@
-.colorBlack {
+@use '_variables.scss' as var;
+.color-black {
   background-color: black;
 }
-.colorCoral {
-  background-color: coral;
+.color-orange {
+  background-color: rgb(204, 124, 19);
 }
-.colorGreenYellow {
-  background-color: greenyellow;
+.color-greenyellow {
+  background-color: rgb(203, 245, 51);
 }
-.colorViolet {
-  background-color: violet;
+.color-dark-purp {
+  background-color: rgb(35, 22, 53);
+}
+
+.color-light-magenta {
+  background-color: rgb(153, 71, 119);
+}
+
+body {
+  background-color: var.$color-background;
+}
+
+.sketch-container {
+  background-color: var.$color-sketchbox-background;
+  border: none;
+}
+
+h1 {
+  color: var.$color-text-highlight;
+}
+
+label {
+  color: var.$color-button-text
+}
+
+button {
+  background-color: var.$color-button-background;
+  color: var.$color-button-text;
+  border: none;
+  transition: background-color .2s, color .2s;
+  &:hover {
+    cursor: pointer;
+    background-color: var.$color-button-text;
+    color: var.$color-button-background;
+  }
 }
