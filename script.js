@@ -1,8 +1,9 @@
 const gridEtch = document.querySelector('.sketch-container');
-const colorList = ['colorBlack'];
+const colorList = ['colorBlack','colorCoral', 'colorGreenYellow', 'colorViolet'];
 const buttonNewGrid = document.querySelector('#newGrid');
 const buttonClearGrid = document.querySelector('#clearGrid');
 const checkboxColorful = document.querySelector('#color-toggle');
+checkboxColorful.checked = false;
 let modeColorful = false;
 
 function generateGrid(size) {
@@ -11,7 +12,7 @@ function generateGrid(size) {
       const squareEtch = document.createElement('div');
       squareEtch.style.cssText = 'z-index: 100';
       squareEtch.addEventListener('mouseover', () => {
-        addColor(squareEtch, 0);
+        addColor(squareEtch, modeColorful);
       })
       squareEtch.style.width = 100/size +'%';
       squareEtch.style.height = 100/size +'%';
@@ -19,8 +20,14 @@ function generateGrid(size) {
     }
   }
 }
-function addColor(target, color = 0) {
-  target.setAttribute('class', colorList[color]);
+function addColor(target, colorful) {
+  if (colorful) {
+    let randomColor = Math.floor(Math.random() * (colorList.length - 1));
+    console.log(randomColor);
+    target.setAttribute('class', colorList[randomColor + 1])
+  } else {
+    target.setAttribute('class', colorList[0]);
+  }
 }
 
 buttonClearGrid.addEventListener('click', () => {

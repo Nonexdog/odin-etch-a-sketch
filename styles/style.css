@@ -2,6 +2,18 @@
   background-color: black;
 }
 
+.colorCoral {
+  background-color: coral;
+}
+
+.colorGreenYellow {
+  background-color: greenyellow;
+}
+
+.colorViolet {
+  background-color: violet;
+}
+
 h1 {
   text-align: center;
 }
