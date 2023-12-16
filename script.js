@@ -1,17 +1,16 @@
 const gridEtch = document.querySelector('.sketch-container');
 const colorList = ['colorBlack'];
-let rowsAndColumns = 16;
 
-function generateGrid() {
-  for(let rows = 1; rows <= rowsAndColumns; rows++) {
-    for(let columns = 1; columns <= rowsAndColumns; columns++) {
+function generateGrid(size) {
+  for(let rows = 1; rows <= size; rows++) {
+    for(let columns = 1; columns <= size; columns++) {
       const squareEtch = document.createElement('div');
       squareEtch.style.cssText = 'border: 1px solid black; z-index: 100';
       squareEtch.addEventListener('mouseover', () => {
         addColor(squareEtch, 0);
       })
-      squareEtch.style.width = 100/rowsAndColumns +'%';
-      squareEtch.style.height = 100/rowsAndColumns +'%';
+      squareEtch.style.width = 100/size +'%';
+      squareEtch.style.height = 100/size +'%';
       gridEtch.appendChild(squareEtch);
     }
   }
@@ -33,4 +32,5 @@ buttonClearGrid.addEventListener('click', () => {
 function askToClear() {
   return confirm('Do you want to erase your current board?');
 }
-generateGrid();
+
+generateGrid(16);
