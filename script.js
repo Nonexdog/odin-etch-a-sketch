@@ -24,9 +24,13 @@ const buttonNewGrid = document.querySelector('#newGrid');
 const buttonClearGrid = document.querySelector('#clearGrid');
 
 buttonClearGrid.addEventListener('click', () => {
-  for (child of gridEtch.children) {
-    child.className = '';
+  if (askToClear()) {
+    for (child of gridEtch.children) {
+      child.className = '';
+    }
   }
 })
-
+function askToClear() {
+  return confirm('Do you want to erase your current board?');
+}
 generateGrid();
